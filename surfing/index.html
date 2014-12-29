@@ -76,6 +76,20 @@
         
 
     
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../backdoors">Detection Backdoors</a>
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../imsi">Detection IMSI Catcher</a>
+            </li>
+        
+
+    
 </ul>
 
       </div>
@@ -105,7 +119,163 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="private-and-secure-web-surfing">Private and Secure Web Surfing</h1>
+              <h1 id="web-surfing">Web Surfing</h1>
+<p>We devided this section into two chapters that go hand in hand. It is vital that you surf the web in a secure way to ensure that private communciation isn't compromised. This requires some modifications and extensions to your browser that are easy to implement. </p>
+<p>Don't worry. This is easier than it sounds.</p>
+<h1 id="secure-web-surfing">Secure Web Surfing</h1>
+<h2 id="browser-choice">Browser Choice</h2>
+<p>Due to its open source we prefer <a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a> considering privacy concerns but regard <a href="http://www.google.com/chrome/">Google Chrome</a> as the most secure web browser. Both browsers are much more secure and flexible than Internet Explorer and Safari.</p>
+<p><img alt="Browsers" src="../img/chrome-firefox.png" /></p>
+<p>The most important step is to strip the browser plugins down to a minimal set and install some usefull extensions. This is easier than it sounds.</p>
+<h2 id="plugins-addons">Plugins / Addons</h2>
+<p>Browsers integrate a lot of plugins that are provided by locally installed software like Adobe Acrobat Reader or Java. While surfing the web, all these plugins are offered to embedded objects in websites and run whenever an object requires it. If one of these software products is out-of-date and has relevant security issues, an attacker is able to exploit the weaknesses by placing specially crafted objects in web pages. (so called Drive-by-Download attacks)</p>
+<p>The best way to avoid these attacks is to disable the browser plugins. Some of the vulnerabilities in plugins installed on your system may not even be known today and are already exploited by government agencies and other criminals to get access to your system. </p>
+<p>You can check the current status of your browser plugins via the following links. </p>
+<h3 id="plugin-checks">Plugin Checks</h3>
+<ul>
+<li><a href="https://www.mozilla.org/en-US/plugincheck/">Mozilla Browser Plugin Check</a> (works with all browsers)</li>
+<li><a href="https://browsercheck.qualys.com/">Qualys Browser Check</a> (requires privilege to install extension)</li>
+</ul>
+<h3 id="effect-of-disabled-plugins">Effect of Disabled Plugins</h3>
+<p>The most often phrased question is "What will I lose by disbaling the plugins?". The answer is "Not much.". What happens is that files like Microsoft Word documents or PDF documents will show up as download and will not be seamlessly integrated in the web page. Other plugins that you know like "Java" or "Flash" will ask to be activated evrytime you need them. We don't regard this as high costs considering the high level of security that you gain by these changes. </p>
+<h3 id="mozilla-firefox">Mozilla Firefox</h3>
+<p>Disable plugins in Firefox is easy as pie. Access the plugin setup via "Menu Button" &gt; Addons &gt; Plugins.</p>
+<p>Disable all plugins by default and select the the option "Ask to activate" for the ones that sound fimiliar to you.</p>
+<p><img alt="Addons" src="../img/firefox1.png" /></p>
+<p><img alt="Addons" src="../img/firefox2.png" /></p>
+<h3 id="google-chrome">Google Chrome</h3>
+<p>In Google Chrome access the plugin page by typing <code>chrome://plugins</code> in the URL bar. </p>
+<p>Disable all plugins except the one called "Native Client" and "Adobe Flash Player" (if you still want to be able to watch YouTube videos on that system). (Note: The flash player called PepperFlashPlayer is the one that ships with Google Chrome. Enable this one if you have the choice as it receives updates more frequently.)</p>
+<p><img alt="Addons" src="../img/chrome1.png" /></p>
+<h3 id="further-help">Further Help</h3>
+<p>If you need more help, visit this <a href="http://www.wikihow.com/Disable-Add-Ons">Tutorial Page</a>.</p>
+<h2 id="useful-extensions">Useful Extensions</h2>
+<h3 id="mozilla-firefox_1">Mozilla Firefox</h3>
+<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=search">NoScript</a> - Controls active content in web pages like JavaScript and embedded objects</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/">AdBlock Plus</a> - Blocks unwanted ads in websites </li>
+<li><a href="https://www.eff.org/HTTPS-EVERYWHERE">HTTPS Everywhere</a> - Ensures that SSL encryption is applied on webpages that offer it (prevents MITM attacks)</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/cookies-manager-plus/">Cookies Manager+</a> - Control the tracking cookies (see PRISM project for more details)</li>
+</ul>
+<h3 id="chrome">Chrome</h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf?hl=en">ScriptSafe</a> - Controls active content in web pages like JavaScript and embedded objects</li>
+<li><a href="https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom?hl=en">AdBlock</a> - Blocks unwanted ads in websites </li>
+<li><a href="https://chrome.google.com/webstore/detail/kb-ssl-enforcer/flcpelgcagfhfoegekianiofphddckof?hl=en">KB SSL Enforcer</a> - Ensures that SSL encryption is applied on webpages that offer it (prevents MITM attacks)</li>
+<li><a href="https://chrome.google.com/webstore/detail/vanilla-cookie-manager/gieohaicffldbmiilohhggbidhephnjj?hl=en">Vanilla Cookie Manager</a> - Control the tracking cookies (see PRISM project for more details)</li>
+</ul>
+<h1 id="private-web-browsing">Private Web Browsing</h1>
+<h2 id="tor-network">Tor Network</h2>
+<p>The Tor software provides free access to a worldwird and community driven privacy network. The leaked documents from the NSA statet that Tor has not yet been compromised and is regarded as a real pain in the ass of the NSA spies. </p>
+<p>The Tor project is also aware that the browser's security level defines the security level of the privacy functions provided by the Tor network. So they started to offer a bundle including a secure version of the Firefox browser to provide a fresh and uncompromised basis. 
+Unfortunately network performance is not always good as botnets and file sharing users tend to drain the overall transfer rate. Another downside is that criminal organisations provide exit nodes that can see all unencrypted network traffic - so make sure that you don't use unencrypted services while using Tor.</p>
+<h3 id="screenshots">Screenshots</h3>
+<p><img alt="Screenshot" src="../img/tor.png" />
+<em>Above: How Tor works (source: eff)</em></p>
+<h3 id="download">Download</h3>
+<p>Available on the <a href="https://www.torproject.org/download/download-easy.html.en">Tor website</a></p>
+<p>Price: Free</p>
+<h3 id="information">Information</h3>
+<p>For information visit <a href="https://www.torproject.org/about/overview.html.en">torproject.org</a></p>
+<h2 id="vpn-services">VPN Services</h2>
+<p>VPN service providers offer a secure and private tunnel to one of their servers in different locations around the world. You pay for this service and get instructions to setup the VPN tunnel to the services of the provider. After establishing the VPN tunnel all your traffic will be encrypted and sent to the remote VPN server. All you connections to remote services will appear as if they originate from this VPN server. </p>
+<p>A downside is that you have to ensure your browser's security by the recommendations listed here on this page. Prices for the services are low but not free. </p>
+<h3 id="screenshots_1">Screenshots</h3>
+<p><img alt="Screenshot" src="../img/swissvpn.png" />
+<em>Above: SwissVPN Website (source: SwissVPN.net)</em></p>
+<h3 id="service-providers-overview">Service Providers Overview</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th>Price/Month</th>
+<th>Payment Options</th>
+<th>Location</th>
+<th>Speed</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://www.swissvpn.net">SwissVPN</a></td>
+<td>6 CHF</td>
+<td>paypal, credit cards</td>
+<td>Switzerland</td>
+<td>very good</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.vpntunnel.se/en/">VPNTUNNEL.SE</a></td>
+<td>3 EUR</td>
+<td>paypal, credit cards</td>
+<td>various</td>
+<td>good</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.ibvpn.com/">IBVPN</a></td>
+<td>2.15 USD</td>
+<td>paypal, credit cards</td>
+<td>various</td>
+<td>?</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><a href="https://airvpn.org/">AirVPN</a></td>
+<td>4 EUR</td>
+<td>paypal, credit cards, bitcoin</td>
+<td>various</td>
+<td>?</td>
+<td>operated by activists and hacktivists in defence of net neutrality, privacy and against censorship.</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.relakks.com">Relakks</a></td>
+<td>3.75 EUR/</td>
+<td>paypal, credit cards</td>
+<td>various</td>
+<td>?</td>
+<td>Based in Sweden and launched in co-operation with the Swedish Pirate Party in 2006.</td>
+</tr>
+<tr>
+<td align="left"><a href="https://perfect-privacy.com">Perfect Privacy</a></td>
+<td>4 EUR</td>
+<td>paypal, credit cards, various including bitcoin</td>
+<td>various</td>
+<td>?</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.trilightzone.org">TrilightZone</a></td>
+<td>6.60 EUR</td>
+<td>paypal, credit cards, various including bitcoin</td>
+<td>various</td>
+<td>?</td>
+<td>VPN, secure shells, and many other services (for Professionals)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparison">Comparison</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Option</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Tor</td>
+<td>bundled with secure browser, free, known to be a problem for the NSA</td>
+<td>slow, exit nodes may be compromised</td>
+</tr>
+<tr>
+<td align="left">VPN Service</td>
+<td>fast, exit node is trustworthy</td>
+<td>not for free, browser must be secured manually</td>
+</tr>
+</tbody>
+</table>
 
             </div>
           </div>
