@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>File Storage - Valhalla - The Privacy Refuge</title>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script>
+
+  <style>
+    body {font-size: 90%;}
+    pre, code {font-size: 100%;}
+    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+  </style> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Valhalla - The Privacy Refuge</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../about">About</a>
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../surfing">Web Surfing</a>
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../messaging">Messaging</a>
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../voice">Voice Calls</a>
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 current">
+                <a class="current" href=".">File Storage</a>
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../passwords">Passwords</a>
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../backdoors">Detection Backdoors</a>
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../imsi">Detection IMSI Catcher</a>
+            </li>
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href=".."></a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    <li>File Storage</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              <h1 id="file-and-disk-encryption">File and Disk Encryption</h1>
+<h2 id="truecrypt">TrueCrypt</h2>
+<p>TrueCrypt is a software system for establishing and maintaining an on-the-fly-encrypted volume (data storage device). On-the-fly encryption means that data is automatically encrypted right before it is saved and decrypted right after it is loaded, without any user intervention. No data stored on an encrypted volume can be read (decrypted) without using the correct password/keyfile(s) or correct encryption keys. Entire file systems can be encrypted (e.g., file names, folder names, contents of every file, free space, meta data, etc).</p>
+<p>Main features:</p>
+<ul>
+<li>Creates a virtual encrypted disk within a file and mounts it as a real disk.</li>
+<li>Encrypts an entire partition or storage device such as USB flash drive or hard drive.</li>
+<li>Encrypts a partition or drive where Windows is installed (pre-boot authentication).</li>
+<li>Encryption is automatic, real-time (on-the-fly) and transparent.</li>
+<li>Parallelization and pipelining allow data to be read and written as fast as if the drive was not encrypted.</li>
+<li>Encryption can be hardware-accelerated on modern processors.</li>
+<li>Provides plausible deniability, in case an adversary forces you to reveal the password: Hidden volume (steganography) and hidden operating system.</li>
+</ul>
+<h3 id="recommended-options-for-new-volumes">Recommended Options for New Volumes</h3>
+<p>AES is still considered as unbroken (Dec 2014) but certain government programs have been identified that are aimed at breaking that widely used encryption algorithm. You should use Twofish in combination with AES to be on the safe side. Don't use Serpent as it has been developed to be used in hardware and the software based encryption/decryption is rather slow. </p>
+<p>Also change RIPEMD-160 to SHA-256. Read this discussion <a href="http://crypto.stackexchange.com/questions/957/ripemd-versus-sha-x-what-are-the-main-pros-and-cons">here</a> if you want to know why. </p>
+<p><img alt="Screenshot" src="../img/truecrypt2.png" /></p>
+<p><em>Above: Recommended encryption options for New TrueCrypt Volumes</em></p>
+<h3 id="no-official-development">No Official Development</h3>
+<p>In May 2014 the developers of TrueCrypt suddenly closed the website and development putting forward some obscure reasons. </p>
+<p>We still recommend using it as it is still considered unbroken and safe. Criminals including the NSA still cannot decrypt TrueCrypt volumes based on two different encryption algorithms and strongs passphrases. </p>
+<p>"For reasons that remain a titillating source of hypothesis, intrigue and paranoia, TrueCrypt's developers chose not to graciously turn their beloved creation over to a wider Internet development community, but rather, as has always been their right granted by TrueCrypt's longstanding license, to attempt to kill it off by creating a dramatically neutered 7.2 version that can only be used to view, but no longer to create new, TrueCrypt volumes.""</p>
+<p>Read the full story <a href="https://www.grc.com/misc/truecrypt/truecrypt.htm">here</a>.</p>
+<h3 id="screenshots">Screenshots</h3>
+<p><img alt="Screenshot" src="../img/truecrypt.jpg" /></p>
+<p><em>Above: Main window (source: heise.de)</em></p>
+<h3 id="download">Download</h3>
+<p>Still available on an <a href="https://truecrypt.ch/">alterntive site</a></p>
+<p>Price: Free</p>
+<h3 id="more-information">More Information</h3>
+<p>For more information visit <a href="http://andryou.com/truecrypt/docs/index.php">grc.com</a></p>
+<h2 id="7-zip">7-Zip</h2>
+<p>7-Zip is a file archiver with a high compression ratio. The important feature is that 7-Zip allows to encrypt an archive and included file names using AES-256. </p>
+<p>7-Zip is open source software. Most of the source code is under the GNU LGPL license. The unRAR code is under a mixed license: GNU LGPL + unRAR restrictions. Check license information here: 7-Zip license. You can use 7-Zip on any computer, including a computer in a commercial organization. You don't need to register or pay for 7-Zip.</p>
+<p>The main features of 7-Zip:</p>
+<ul>
+<li>High compression ratio in 7z format with LZMA and LZMA2 compression</li>
+<li>Supported formats: Packing / unpacking: 7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM Unpacking only: ARJ, CAB, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, ISO, LZH, LZMA, MBR, MSI, NSIS, NTFS, RAR, RPM, SquashFS, UDF, VHD, WIM, XAR and Z.</li>
+<li>Strong AES-256 encryption in 7z and ZIP formats</li>
+<li>Self-extracting capability for 7z format</li>
+<li>Integration with Windows Shell</li>
+<li>Powerful File Manager</li>
+<li>Powerful command line version</li>
+<li>Plugin for FAR Manager</li>
+<li>Localizations for 87 languages</li>
+</ul>
+<h3 id="recommended-options-for-new-volumes_1">Recommended Options for New Volumes</h3>
+<p>When creating a new archive options allow to set a password and encryption method. Choose AES-256 and set a strong password with at least 12 characters based on lower and uppercase characters, numbers and symbols. You can choose <a href="http://blog.kaspersky.com/password-check/">this service</a> if the scheme you want to use for your password is a secure one. </p>
+<p><img alt="Screenshot" src="../img/7zip2.png" /></p>
+<p><em>Above: Encryption options for new archives</em></p>
+<h3 id="screenshots_1">Screenshots</h3>
+<p><img alt="Screenshot" src="../img/7zip1.png" /></p>
+<p><em>Above: Main window</em></p>
+<h3 id="download_1">Download</h3>
+<p>Available on the <a href="http://www.7-zip.org/download.html">official website</a></p>
+<p>Price: Free</p>
+<h3 id="more-information_1">More Information</h3>
+<p>For more information visit <a href="http://www.7-zip.org/">7-zip.org</a></p>
+
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../passwords" class="btn btn-neutral float-right" title="Passwords"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../voice" class="btn btn-neutral" title="Voice Calls"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        
+      <span><a href="../voice" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../passwords" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+</body>
+</html>
