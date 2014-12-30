@@ -78,6 +78,13 @@
     
         
             <li class="toctree-l1 ">
+                <a class="" href="../passwords">Passwords</a>
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
                 <a class="" href="../backdoors">Detection Backdoors</a>
             </li>
         
@@ -120,6 +127,60 @@
           <div role="main">
             <div class="section">
               <h1 id="detection-imsi-catcher">Detection: IMSI Catcher</h1>
+<p>This section lists tools that help you to determine if your mobile connection is intercepted by 3rd parties. </p>
+<h2 id="android-imsi-catcher-detector-non-root">Android IMSI Catcher Detector (non-root)</h2>
+<p>Android IMSI Catcher Detector is an Android-based project to detect and avoid fake base stations (IMSI-Catchers) in GSM/UMTS Networks. </p>
+<p>Application Goals</p>
+<ul>
+<li>Detect IMSI based device location tracking</li>
+<li>Detect and prevent the use of false BTS towers used for illegal interception</li>
+<li>Detect and prevent the use of broken ciphering algorithms (A5/1) during calls</li>
+<li>Detect and prevent remote hidden application installation</li>
+<li>Detect and prevent remote hidden SMS-based SIM attacks</li>
+<li>Provide counter measures against tracking</li>
+<li>Prevent leakage of sensitive GPS data</li>
+<li>Provide swarm-wise-decision-based cellular service interruption</li>
+<li>Provide secure wifi/wimax alternative data routes through MESH-like networking</li>
+<li>Aims to be recommended and added to the Guardian Project's list of secure Apps</li>
+<li>Aims to be recommended by the SSD Project of the Electronic Frontier Foundation</li>
+<li>Aims to be recommended by Privacy International (and like-minded organizations)</li>
+<li>Does not secure any data transmissions</li>
+<li>Does not prevent already installed rogue applications from full access and spying</li>
+</ul>
+<h3 id="screenshots">Screenshots</h3>
+<p><img alt="Screenshot" src="../img/imsi-catcher.png" /></p>
+<p><em>Above: Screenshots of the Android App (source: secupwn.github.io/Android-IMSI-Catcher-Detector/)</em></p>
+<h2 id="download">Download</h2>
+<p>Available on <a href="http://aimsicd.store.aptoide.com/">AIMSICD</a></p>
+<p>Available on <a href="https://github.com/SecUpwN/Android-IMSI-Catcher-Detector/releases">GitHub</a></p>
+<p>Available on <a href="https://f-droid.org/repository/browse/?fdid=com.SecUpwN.AIMSICD">F-Droid</a></p>
+<p>Price: Free</p>
+<h3 id="more-information">More Information</h3>
+<p>For more information visit the <a href="https://secupwn.github.io/Android-IMSI-Catcher-Detector/">Website</a></p>
+<h2 id="snoopsnitch-root-qualcomm-chipset">SnoopSnitch (root; Qualcomm chipset)</h2>
+<p>SnoopSnitch collects and analyzes mobile radio data to make you aware of your mobile network security and to warn you about threats like fake base stations (IMSI catchers), user tracking and over-the-air updates. To use SnoopSnitch, a rooted device with a Qualcomm chipset running stock Android 4.1 or higher is required. Unfortunately, custom ROMs are unsupported at the moment as they lack necessary proprietary drivers.</p>
+<p>This application uses data contributed by other users. By choosing to upload your measurement results or security events, you can help improve this data base and support future research.
+SnoopSnitch will ask for confirmation whenever any of your information is uploaded to our servers. All uploads are encrypted. Note that uploaded radio traces may contain private information as a side-effect.</p>
+<p>The following permissions are required:</p>
+<ul>
+<li>ACCESS_SUPERUSER: Open Qualcomm diagnosis interface to capture radio data</li>
+<li>CALL_PHONE, READ_PHONE_STATE, SEND_SMS, RECEIVE_SMS: Generate mobile network traffic recorded in active tests</li>
+<li>GET_TASKS: Retrieve state of helper processes interacting with diagnosis interface</li>
+<li>WAKE_LOCK: Acquire CPU for long-running analysis steps</li>
+<li>ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION: record location of IMSI catchers and security events if configured</li>
+<li>INTERNET: Download new data from gsmmap.org, upload radio traces and debug logs upon request</li>
+<li>ACCESS_NETWORK_STATE: Postpone uploads until network is available</li>
+</ul>
+<p>SnoopSnitch is open-source software released under the GPL version 3. </p>
+<h3 id="screenshots_1">Screenshots</h3>
+<p><img alt="Screenshot" src="../img/snoopsnitch1.png" />
+<img alt="Screenshot" src="../img/snoopsnitch2.png" /></p>
+<p><em>Above: Screenshots of the Android App (source: https://opensource.srlabs.de/projects/snoopsnitch)</em></p>
+<h3 id="download_1">Download</h3>
+<p>Available in the <a href="https://play.google.com/store/apps/details?id=de.srlabs.snoopsnitch">Google Play Store</a></p>
+<p>Price: Free</p>
+<h3 id="more-information_1">More Information</h3>
+<p>For more information visit the <a href="https://opensource.srlabs.de/projects/snoopsnitch">Website</a></p>
 
             </div>
           </div>
